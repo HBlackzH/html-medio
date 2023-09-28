@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #004D98;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #DB0030;
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 84% 100%);
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+section .container{
+    position: relative;
+    box-sizing: border-box;
+    padding: 100px 50px 100px 150px;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+section .container h2{
+    color: white;
+    font-size: 70px;
+}
+section .container p{
+    color: white;
+    font-size: 16px;
+    line-height: 27px;
+}
+section .container a{
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #EDBB00;
+    color: #000;
+    padding: 13px 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+section .banner{
+    position: relative;
+    padding-right: 150px;
+}
+section .banner img{
+    max-width: 425px;
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+}
+.nav{
+    position: absolute;
+    display: flex;
+    top: 60px;
+    left: 150px;
+    border-right: 5px solid #EDBB00;
+    padding-right: 10px;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+.nav li{
+    list-style-type: none;
+}
+.nav li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.nav li a.active,
+.nav li a:hover{
+    color: #EDBB00;
+}
+.social{
+    position: absolute;
+    display: flex;
+    bottom: 60px;
+    left: 150px;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.social li{
+    list-style-type: none;
+}
+.social li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+    font-size: 20px;
+}
+.social li a:hover{
+    color: #EDBB00;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 2;
+    }
+}
+@keyframes left-in{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 2;
+    }
+}
